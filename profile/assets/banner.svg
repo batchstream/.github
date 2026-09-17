@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="390" viewBox="0 0 1600 390" fill="none">
+  <title>BatchStream — One data layer. Many stores.</title>
+  <desc>BatchStream data infrastructure for MongoDB, Elasticsearch, and OpenSearch.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1600" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D191F"/>
+      <stop offset="1" stop-color="#101F28"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="190" y1="140" x2="345" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EE8BA"/>
+      <stop offset="1" stop-color="#61BDF5"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#43C7AA" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#43C7AA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="390" rx="22" fill="url(#background)"/>
+  <ellipse cx="205" cy="195" rx="390" ry="270" fill="url(#glow)"/>
+  <g transform="translate(30 40) scale(.6)">
+    <rect x="99" y="122" width="40" height="40" rx="9" fill="#5EE8BA"/>
+    <rect x="99" y="236" width="40" height="40" rx="9" fill="#5AD8D1"/>
+    <rect x="99" y="350" width="40" height="40" rx="9" fill="#61BDF5"/>
+    <path d="M185 142H293C367 142 367 256 293 256H185H306C388 256 388 370 306 370H185" stroke="url(#stream)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M324 83V305" stroke="#39535D" stroke-opacity=".65"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="380" y="84" fill="#6ADBBE" font-size="18" font-weight="600" letter-spacing="4">OPEN SOURCE DATA INFRASTRUCTURE</text>
+    <text x="374" y="188" fill="#F0F8F5" font-size="94" font-weight="700" letter-spacing="-4">BatchStream</text>
+    <text x="380" y="257" fill="#CCDAD9" font-size="33" font-weight="400">One data layer. Many stores.</text>
+    <text x="380" y="313" fill="#87A3AB" font-size="20">MongoDB  ·  Elasticsearch  ·  OpenSearch</text>
+  </g>
+  <g stroke="#5EE8BA" stroke-opacity=".22" stroke-width="2">
+    <path d="M1180 195H1240C1270 195 1260 110 1300 110H1488"/>
+    <path d="M1180 195H1488"/>
+    <path d="M1180 195H1240C1270 195 1260 280 1300 280H1488"/>
+  </g>
+  <g fill="#5EE8BA">
+    <rect x="1159" y="182" width="27" height="27" rx="6" opacity=".9"/>
+    <rect x="1350" y="96" width="53" height="28" rx="6" opacity=".4"/>
+    <rect x="1413" y="96" width="28" height="28" rx="6" opacity=".19"/>
+    <rect x="1305" y="181" width="28" height="28" rx="6" opacity=".38"/>
+  </g>
+  <g fill="#61BDF5">
+    <rect x="1343" y="181" width="83" height="28" rx="6" opacity=".34"/>
+    <rect x="1365" y="266" width="53" height="28" rx="6" opacity=".36"/>
+    <rect x="1428" y="266" width="28" height="28" rx="6" opacity=".18"/>
+  </g>
+</svg>

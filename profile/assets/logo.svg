@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <title>BatchStream</title>
+  <desc>Three data packets join a flowing B, on a dark background.</desc>
+  <defs>
+    <linearGradient id="stream" x1="190" y1="140" x2="345" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EE8BA"/>
+      <stop offset="1" stop-color="#61BDF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0D191F"/>
+  <rect x="99" y="122" width="40" height="40" rx="9" fill="#5EE8BA"/>
+  <rect x="99" y="236" width="40" height="40" rx="9" fill="#5AD8D1"/>
+  <rect x="99" y="350" width="40" height="40" rx="9" fill="#61BDF5"/>
+  <path d="M185 142H293C367 142 367 256 293 256H185H306C388 256 388 370 306 370H185" stroke="url(#stream)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
