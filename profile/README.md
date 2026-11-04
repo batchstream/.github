@@ -12,3 +12,5 @@ We build open-source data infrastructure.
 - [weir-tests](https://github.com/batchstream/weir-tests): independent integration tests and throughput comparisons
 
 **[Sink](https://github.com/batchstream/sink)** gives applications one gRPC API across the same stores, with optional Kafka-backed asynchronous delivery.
+
+**[Gush](https://github.com/batchstream/gush)** lets Go services write durable flows and steps on Temporal as plain functions, with OTLP logs that follow the work across workers.
