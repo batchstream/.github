@@ -13,4 +13,4 @@ We build open-source data infrastructure.
 
 **[Sink](https://github.com/batchstream/sink)** gives applications one gRPC API across the same stores, with optional Kafka-backed asynchronous delivery.
 
-**[Gush](https://github.com/batchstream/gush)** lets Go services write durable Temporal flows and steps as plain functions, with priority, fair scheduling and OTLP logs that follow the work across workers.
+**[Gush](https://github.com/batchstream/gush)** lets Go services write durable flows and steps on Temporal as plain functions, with OTLP logs that follow the work across workers.
