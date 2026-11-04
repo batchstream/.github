@@ -3,37 +3,42 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/batchstream/sink#quickstart"><strong>Quickstart</strong></a> &nbsp;·&nbsp;
-  <a href="https://github.com/batchstream/sink/blob/main/docs/README.md">Documentation</a> &nbsp;·&nbsp;
-  <a href="https://github.com/batchstream/sink-go">Go client</a> &nbsp;·&nbsp;
-  <a href="https://github.com/batchstream/sink/releases">Releases</a> &nbsp;·&nbsp;
-  <a href="https://batchstream.io">batchstream.io</a>
+  <a href="https://github.com/batchstream/weir#build-and-run"><strong>Get started</strong></a> &nbsp;·&nbsp;
+  <a href="https://github.com/batchstream/weir/tree/main/docs">Documentation</a> &nbsp;·&nbsp;
+  <a href="https://github.com/batchstream/weir-go">Go SDK</a> &nbsp;·&nbsp;
+  <a href="https://github.com/batchstream/weir-charts">Helm chart</a> &nbsp;·&nbsp;
+  <a href="https://github.com/batchstream/weir-tests">System tests</a>
 </p>
 
 ### Shared storage, simpler applications.
 
-We build open-source data infrastructure. Our core project, **[Sink](https://github.com/batchstream/sink)**, gives applications one gRPC API to read, write, merge, and query documents across **MongoDB, Elasticsearch, and OpenSearch**.
+We build open-source data infrastructure. Our core project, **[Weir](https://github.com/batchstream/weir)**, combines concurrent database requests into bounded batches for **MongoDB, Elasticsearch, and OpenSearch**.
 
-| Batch by default | Keep native power | Choose your delivery |
+| Batch by default | Keep native power | Bound every resource |
 | :--- | :--- | :--- |
-| Combine small operations into bounded batches. Share connections and control load per store. | Use native queries, explicit JSON/BSON encoding, and atomic Lua merges. | Apply changes synchronously or accept them through a durable Kafka queue. |
+| Concurrent single-record writes become native MongoDB `bulkWrite` and Search `_bulk` calls over a small set of connections shared per Store. | Use typed reads and mutations, Lua transforms, and native backend commands. | Static queue, batch, stream, and message limits bound memory. Full queues apply backpressure. |
 
-### Start with Sink
+### Start with Weir
 
-Bring up a local stack and run an end-to-end check with Docker Compose and Make:
+Build the server from source with Go, then point it at your stores:
 
 ```sh
-git clone https://github.com/batchstream/sink.git
-cd sink
-make quickstart
+git clone https://github.com/batchstream/weir.git
+cd weir
+go build -o bin/weir ./cmd/weir
+cp config/weir.reference.yaml weir.yaml
 ```
 
-[Explore the architecture →](https://github.com/batchstream/sink/blob/main/docs/architecture.md) &nbsp; [Try the Go client →](https://github.com/batchstream/sink-go#quick-start)
+[Explore the architecture →](https://github.com/batchstream/weir/blob/main/docs/architecture.md) &nbsp; [Try the Go SDK →](https://github.com/batchstream/weir-go#connect-and-read)
 
 ### Built to be checked
 
-Our **[public qualification suite](https://github.com/batchstream/sink-production-suite)** exercises real storage backends, fault recovery, and client/server contracts using synthetic data and disposable infrastructure.
+**[weir-tests](https://github.com/batchstream/weir-tests)** runs independent blackbox integration tests, soak tests, and paired direct-versus-Weir throughput comparisons on owned fixtures, using only the published SDK and protocol.
+
+### Also from BatchStream
+
+**[Sink](https://github.com/batchstream/sink)** gives applications one gRPC API across the same stores, with optional Kafka-backed asynchronous delivery. See also its [Go client](https://github.com/batchstream/sink-go) and [qualification suite](https://github.com/batchstream/sink-production-suite).
 
 <p>
-  <sub>Open source · MIT licensed · <a href="https://github.com/batchstream/sink/blob/main/CONTRIBUTING.md">Contributions welcome</a> · <a href="https://github.com/batchstream/sink/issues">Issues &amp; ideas</a></sub>
+  <sub>Open source · MIT licensed · <a href="https://github.com/batchstream/weir/blob/main/CONTRIBUTING.md">Contributions welcome</a> · <a href="https://github.com/batchstream/weir/issues">Issues &amp; ideas</a></sub>
 </p>
